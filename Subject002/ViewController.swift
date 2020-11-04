@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 
     class Calculate {
         
-        enum Operator: String {
+        enum Operator: String, CaseIterable {
             case add = "+"
             case subtract = "-"
             case multiply = "×"
