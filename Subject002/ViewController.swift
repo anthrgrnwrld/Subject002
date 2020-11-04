@@ -62,19 +62,15 @@ class ViewController: UIViewController {
             switch op {
                 case .add:
                     result = num1 + num2
-                    break
                 case .subtract:
                     result = num1 - num2
-                    break
                 case .multiply:
                     result = num1 * num2
-                    break
                 case .devide:
                     if num2 == 0 {
                         throw ErrorCalculate.zeroDevide
                     }
                     result = num1 / num2
-                    break
             }
             return result
         }
