@@ -51,7 +51,6 @@ class ViewController: UIViewController {
         }
         
         func calc(op: Operator, num1: Int?, num2: Int?) throws -> Int {
-            var result: Int = 0
             
             if num1 == nil || num2 == nil {
                 fatalError("num is nil.")
@@ -59,6 +58,7 @@ class ViewController: UIViewController {
             let num1 = num1!
             let num2 = num2!
             
+            let result: Int
             switch op {
                 case .add:
                     result = num1 + num2
