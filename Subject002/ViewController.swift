@@ -30,24 +30,25 @@ class ViewController: UIViewController {
             case zeroDevide
         }
         
-        let operatorChar = [Operator.add.rawValue,
-                            Operator.subtract.rawValue,
-                            Operator.multiply.rawValue,
-                            Operator.devide.rawValue]
+//        let operatorChar = [Operator.add.rawValue,
+//                            Operator.subtract.rawValue,
+//                            Operator.multiply.rawValue,
+//                            Operator.devide.rawValue]
         
         func getOperator(opText: String) -> Operator? {
-            switch(opText) {
-                case Operator.add.rawValue:
-                    return Operator.add
-                case Operator.subtract.rawValue:
-                    return Operator.subtract
-                case Operator.multiply.rawValue:
-                    return Operator.multiply
-                case Operator.devide.rawValue:
-                    return Operator.devide
-                default:
-                    return nil
-            }
+//            switch(opText) {
+//                case Operator.add.rawValue:
+//                    return Operator.add
+//                case Operator.subtract.rawValue:
+//                    return Operator.subtract
+//                case Operator.multiply.rawValue:
+//                    return Operator.multiply
+//                case Operator.devide.rawValue:
+//                    return Operator.devide
+//                default:
+//                    return nil
+//            }
+            Operator(rawValue: opText)
         }
         
         func calc(op: Operator, num1: Int?, num2: Int?) throws -> Int {
@@ -83,15 +84,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //SegmentedControlの表示文字列をセット
-        calcSubject002.operatorChar.enumerated().forEach{
-            operatorSegment.setTitle($0.1, forSegmentAt: $0.0)
+//        calcSubject002.operatorChar.enumerated().forEach{
+        Calculate.Operator.allCases.enumerated().forEach{
+//            operatorSegment.setTitle($0.1.rawValue, forSegmentAt: $0.0)
+            operatorSegment.setTitle($0.1.rawValue, forSegmentAt: $0.0)
         }
-        
     }
 
     //ボタンを押した時
     @IBAction func pressButton(_ sender: Any) {
-        var outputText = ""
         
         //テキストフィールドの文字列を数値に変換する
         let numArray = changeNumTextFieldArrayToInt(numTextField)
@@ -110,6 +111,7 @@ class ViewController: UIViewController {
         }
         
         //計算、及び、ラベルへ結果の出力
+        let outputText: String
         do {
             let result = try calcSubject002.calc(op: op, num1: numArray[0], num2: numArray[1])
             outputText = "\(result)"
