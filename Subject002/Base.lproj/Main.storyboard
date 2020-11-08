@@ -71,9 +71,9 @@
                     </view>
                     <connections>
                         <outlet property="operatorSegment" destination="goo-ZT-kNP" id="Y73-hW-npN"/>
-                        <outlet property="resultCalc" destination="Kgq-hG-px2" id="9eb-gQ-6Ar"/>
-                        <outletCollection property="numTextField" destination="8sw-Rq-IXV" collectionClass="NSMutableArray" id="wqx-ls-qLz"/>
-                        <outletCollection property="numTextField" destination="oWu-XB-5vo" collectionClass="NSMutableArray" id="Chl-qW-G2x"/>
+                        <outlet property="resultCalcLabel" destination="Kgq-hG-px2" id="6BH-a2-y4A"/>
+                        <outletCollection property="numTextFields" destination="8sw-Rq-IXV" collectionClass="NSMutableArray" id="NQg-aR-qb2"/>
+                        <outletCollection property="numTextFields" destination="oWu-XB-5vo" collectionClass="NSMutableArray" id="sQn-js-Yuy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
